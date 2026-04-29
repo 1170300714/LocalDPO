@@ -366,16 +366,26 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+      <div class="has-text-centered mb-4">
+        <h2 class="title is-3">Overview</h2>
       </div>
+
+      <div class="has-text-centered mb-4">
+        <!-- 请修改 src 为你的实际图片路径，调整 width 样式控制大小 -->
+        <img src="static/images/teaser_image.png" 
+             alt="Motivation Visualization" 
+             style="max-width: 100%; height: auto; border-radius: 8px;" 
+             loading="lazy"/>
+      </div>
+
+      <div class="content has-text-centered">
+        <p>
+        Comparison between (a) vanilla DPO and (b) LocalDPO for video diffusion model (VDM). 
+          LocalDPO efficiently constructs positive-negative pairs by locally corrupting real videos, avoiding multi-round sampling, extra critic models, and annotation ambiguities.
+    (c) Quantifies comprison of GPU time in constructing preference pairs.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
