@@ -384,7 +384,7 @@
           LocalDPO efficiently constructs positive-negative pairs by locally corrupting real videos, avoiding multi-round sampling, extra critic models, and annotation ambiguities.
     (c) Quantifies comprison of GPU time in constructing preference pairs.
         </p>
-
+        <br>
         <p class="is-size-5">
         The main contributions of this paper are summarized as follows:
         </p>
@@ -392,13 +392,13 @@
                 <!-- 列表区域 -->
         <ul style="text-align: left; display: inline-block; margin-top: 1rem; font-size: 20px;">
           <li class="mb-3">
-            <strong>We propose LocalDPO</strong>, a novel preference optimization method that builds training pairs from real videos and their locally corrupted versions, bypassing costly multi-sample generation and annotations in existing methods. The negative samples are homologous with model and each preference pair is high-confidence.
+            <strong>1. We propose LocalDPO</strong>, a novel preference optimization method that builds training pairs from real videos and their locally corrupted versions, bypassing costly multi-sample generation and annotations in existing methods. The negative samples are homologous with model and each preference pair is high-confidence.
           </li>
           <li class="mb-3">
-            <strong>We propose a mask-guided local region-aware DPO loss</strong> to enable fine-grained preference learning on region-level degradations while preserving global coherence.
+            <strong>2. We propose a mask-guided local region-aware DPO loss</strong> to enable fine-grained preference learning on region-level degradations while preserving global coherence.
           </li>
           <li>
-            <strong>Extensive experiments show that LocalDPO outperforms</strong> pre-trained VDMs, SFT, and existing preference-based methods, producing videos with higher visual fidelity, fewer temporal artifacts, and stronger alignment with input prompts quantitatively and qualitatively.
+            <strong>3. Extensive experiments show that LocalDPO outperforms</strong> pre-trained VDMs, SFT, and existing preference-based methods, producing videos with higher visual fidelity, fewer temporal artifacts, and stronger alignment with input prompts quantitatively and qualitatively.
           </li>
         </ul>
       </div>
@@ -413,7 +413,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3">LocalDPO</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <!-- TODO: Add poster image for better preview -->
