@@ -413,30 +413,33 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">LocalDPO</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
+      <div class="has-text-centered mb-4">
+        <h2 class="title is-3">LocalDPO</h2>
       </div>
+      
+      <div class="has-text-centered mb-4">
+        <!-- 请修改 src 为你的实际图片路径，调整 width 样式控制大小 -->
+        <img src="static/images/method.png" 
+             alt="Motivation Visualization" 
+             style="max-width: 100%; height: auto; border-radius: 8px;" 
+             loading="lazy"/>
+      </div>
+
+      <div class="content has-text-left" style="font-size: 20px; line-height: 1.6;">
+        <p>
+          We first randomly sample several Bézier curves on the original video and ensure that these curves form closed shapes. 
+          The interior of each closed shape defines the region to be corrupted in subsequent steps. 
+          Then, the masked area of real video is inpainted by the pretrained VDM. 
+          Specifically, given the latent of input real video, the model first adds a controlled amount of noise to its latent representation and then denoises it step by step. 
+          During each denoising step, the original video latent is re-noised at the noise level corresponding to the next timestep and then fused with the denoised latent via a 
+          <strong>latent fusion mechanism</strong> by 
+          <span style="font-family: 'Times New Roman', serif; font-style: italic;">
+            z<sub>t-1</sub> = M ⊙ ẑ<sub>t-1</sub> + (1 - M) ⊙ z<sup>orig</sup><sub>t-1</sub>
+          </span>.
+        </p>
+      </div>
+
+      
     </div>
   </div>
 </section>
